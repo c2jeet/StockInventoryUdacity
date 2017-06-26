@@ -193,18 +193,22 @@ public class EditorActivity extends AppCompatActivity implements android.app.Loa
             @Override
             public void onClick(View v) {
                 String currentValueString = mItemQuantityEt.getText().toString();
-                int currentValueInt;
+                int currentValueInt = Integer.parseInt(currentValueString);
                 if (currentValueString.isEmpty())
                 {
                     return;
                 }
-                else if (currentValueString.equals("0"))
+                else if (currentValueInt <= 0)
                 {
+                    return;
+                }
+                else if ((currentValueInt - sharedPreferencesQuantity) < 0)
+                {
+                    mItemQuantityEt.setText(String.valueOf(currentValueInt - 1));
                     return;
                 }
                 else
                 {
-                    currentValueInt = Integer.parseInt(currentValueString);
                     mItemQuantityEt.setText(String.valueOf(currentValueInt - sharedPreferencesQuantity));
                 }
             }
@@ -221,7 +225,7 @@ public class EditorActivity extends AppCompatActivity implements android.app.Loa
         }
         else
         {
-            Toast.makeText(this, "User has to grant permissions to access image!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "User has to grant the permissions to access image!", Toast.LENGTH_SHORT).show();
         }
     }
 
