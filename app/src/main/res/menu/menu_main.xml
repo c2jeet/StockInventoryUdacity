@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.abco_abhijeet.stockinventory.MainActivity">
+    <item
+        android:id="@+id/action_dummy_data"
+        android:orderInCategory="100"
+        android:title="Add Dummy Data"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_delete_allItems"
+        android:orderInCategory="100"
+        android:title="Delete All Items"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_redirect_sharedPreference"
+        android:orderInCategory="100"
+        android:title="Add Quantity Change Value"
+        app:showAsAction="never" />
+</menu>

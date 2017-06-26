@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.abco_abhijeet.stockinventory.EditorActivity">
+    <item
+        android:id="@+id/fab"
+        android:orderInCategory="100"
+        android:title="Delete This Item"
+        android:icon="@drawable/ic_check_black_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_delete_current_item"
+        android:orderInCategory="100"
+        android:title="Delete This Item"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_order_current_item"
+        android:orderInCategory="100"
+        android:title="Order More"
+        app:showAsAction="never" />
+</menu>
